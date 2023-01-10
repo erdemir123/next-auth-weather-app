@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const Login = () => {
   const [register, setRegister] = useState(true);
+  const {data:session}=useSession()
   const handlelogin = (e) => {
     e.preventDefault();
     setRegister(!register);
@@ -24,6 +26,7 @@ const Login = () => {
     } else {
       alert("!");
     }
+    console.log(session);
   };
   return register ? (
     <div className="w-[100%] mx-4 mt-14">
@@ -36,6 +39,7 @@ const Login = () => {
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
               className="inline-block p-3 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+              onClick={() => signIn()}
             >
               {/* Facebook */}
               <svg width="20" height="20" viewBox="0 0 256 256"><path fill="currentColor" d="M128 228a100 100 0 1 1 70.7-170.7a12 12 0 0 1 0 17a12.2 12.2 0 0 1-17 0A75.2 75.2 0 0 0 128 52a76 76 0 1 0 75.1 88H128a12 12 0 0 1 0-24h88a12 12 0 0 1 12 12a100.2 100.2 0 0 1-100 100Z"/></svg>

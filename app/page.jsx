@@ -13,9 +13,6 @@ export default function Home() {
     if(session){
       router.replace("/home")
     }
-    else{
-      router.push("/")
-    }
   },[session])
   return (
     <div className="flex justify-center items-center w-[100%]  h-[100%]">

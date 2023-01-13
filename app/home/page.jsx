@@ -1,13 +1,11 @@
 "use client"
-import Head from 'next/head';
-import Image from 'next/image';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { BiUserX } from 'react-icons/bi';
 import Weather from '../../components/Weather';
 import Spinner from '../../components/Spinner';
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession,signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation';
 
 export default function Home() {

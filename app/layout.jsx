@@ -1,9 +1,6 @@
 "use client"
 import Providers from "./Provider";
 import "./globals.css";
-import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
-import { useEffect } from "react";
 
 
 

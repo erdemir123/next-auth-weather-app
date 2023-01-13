@@ -20,9 +20,13 @@ const Login = () => {
   };
   return (
     <div className="w-[100%] mx-4 mt-14">
+       <img
+          src='https://images.unsplash.com/photo-1601134467661-3d775b999c8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2575&q=80'
+          className='w-full h-full absolute top-0 -z-10 left-0'
+        />
       <div>
         <form>
-          <div className="flex flex-row items-center justify-center lg:justify-start">
+          <div className="flex flex-row items-center justify-center ">
             <p className="text-lg mb-0 mr-4">Sign in with</p>
             <button
               type="button"
